@@ -6,19 +6,19 @@ function App() {
   const [studentInfo, setStudentInfo] = useState([])
   
   useEffect(() => {
-    axios.get('http://localhost:5000')
+    axios.get('https://crud-sql-server-kre3tsvj3-masud-rahmans-projects.vercel.app')
       .then(res => setStudentInfo(res.data))
       .catch(err => console.error(err))
   }, [])
   const handleDelete = (id)=>{
-    axios.delete(`http://localhost:5000/delete/`+id)
+    axios.delete(`https://crud-sql-server-kre3tsvj3-masud-rahmans-projects.vercel.app/delete/`+id)
     .then(res => {
       console.log(res.data)
       window.location.reload()
     })
     .catch(err=> console.error(err))
   }
-
+  console.log(studentInfo)
   return (
     <>
       <div className='flex h-screen bg-teal-700 justify-center items-center'>

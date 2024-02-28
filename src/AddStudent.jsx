@@ -10,7 +10,7 @@ const AddStudent = () => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log(name,email)
-        axios.post('http://localhost:5000/create', { name, email })
+        axios.post('https://crud-sql-server-kre3tsvj3-masud-rahmans-projects.vercel.app/create', { name, email })
             .then(res => console.log(res.data))
             .catch(err => console.error(err))
             navigate('/')

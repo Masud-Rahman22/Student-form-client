@@ -13,13 +13,13 @@ const UpdateInfo = () => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log(name,email)
-        axios.put('http://localhost:5000/update/'+id, { name, email })
+        axios.put('https://crud-sql-server-kre3tsvj3-masud-rahmans-projects.vercel.app/update/'+id, { name, email })
             .then(res => console.log(res.data))
             .catch(err => console.error(err))
             navigate('/')
     }
     useEffect(()=>{
-        axios.get('http://localhost:5000/'+id)
+        axios.get('https://crud-sql-server-kre3tsvj3-masud-rahmans-projects.vercel.app/'+id)
         .then(res => setData(res.data))
         .catch(err=> console.error(err))
     },[id])
